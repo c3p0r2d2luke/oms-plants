@@ -1,10 +1,301 @@
-header{
-    background-color:lightgreen;
-    color:black;
-    text-align: center;
-    display:flex;
+/* ===============================
+   OMS PLANT SALE - FULL STYLESHEET
+================================== */
+
+:root {
+    --bg-main: #f6fbf8;
+    --bg-soft: #ffffff;
+    --leaf-dark: #274b3a;
+    --leaf-mid: #3f7c61;
+    --leaf-light: #a7d7c5;
+    --accent-sun: #ffd166;
+    --text-dark: #1e2b26;
+    --text-muted: #5f6f69;
+    --danger: #e76f51;
 }
 
-body{
-    background-color: limegreen;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(circle at top right, #e8f5ef, var(--bg-main));
+    color: var(--text-dark);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ===============================
+   HEADER
+================================== */
+
+header {
+    background: white;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(39, 75, 58, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    color: var(--leaf-dark);
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--leaf-dark);
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--leaf-mid);
+}
+
+/* ===============================
+   HERO SECTION
+================================== */
+
+.hero {
+    padding: 6rem 3rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--leaf-dark);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* ===============================
+   BUTTONS
+================================== */
+
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--leaf-mid), var(--leaf-dark));
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(39, 75, 58, 0.25);
+}
+
+.button.secondary {
+    background: white;
+    color: var(--leaf-dark);
+    border: 2px solid var(--leaf-dark);
+}
+
+/* ===============================
+   PLANT GRID
+================================== */
+
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+}
+
+/* ===============================
+   PLANT CARD
+================================== */
+
+.plant-card {
+    background: var(--bg-soft);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 12px 35px rgba(39, 75, 58, 0.08);
+    transition: 0.3s ease;
+    border: 1px solid rgba(39, 75, 58, 0.05);
+    position: relative;
+}
+
+.plant-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(39, 75, 58, 0.15);
+}
+
+.plant-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.plant-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--leaf-dark);
+}
+
+.plant-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--leaf-dark);
+    margin-bottom: 1rem;
+}
+
+/* ===============================
+   PREORDER BADGE
+================================== */
+
+.preorder-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #ff9f1c, var(--accent-sun));
+    color: #3a2f00;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    animation: growPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes growPulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+}
+
+/* ===============================
+   FORM (FOR PREORDERS)
+================================== */
+
+form {
+    max-width: 500px;
+    margin: 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(39, 75, 58, 0.08);
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(39, 75, 58, 0.2);
+    font-size: 1rem;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: var(--leaf-mid);
+}
+
+/* ===============================
+   FOOTER
+================================== */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    color: var(--text-muted);
+    margin-top: 4rem;
+    border-top: 1px solid rgba(39, 75, 58, 0.1);
+}
+
+/* ===============================
+   LOADING VIEW
+================================== */
+
+.loading-view {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.loading-container {
+    width: 72px;
+    height: 54px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.dot-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--leaf-light), var(--leaf-dark));
+    border-radius: 50%;
+    animation: loading-view-movement 3750ms cubic-bezier(0.8, 0, 0.8, 1) infinite;
+}
+
+.dot-container:nth-of-type(2) {
+    animation-delay: 130ms;
+}
+
+.dot-container:nth-of-type(3) {
+    animation-delay: 260ms;
+}
+
+@keyframes loading-view-movement {
+    0%, 27%, 54% { transform: translateY(0); }
+    14%, 41%, 68% { transform: translateY(-20px); }
+    27%, 54%, 81%, 100% { transform: translateY(0); }
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .plant-grid {
+        padding: 2rem;
+    }
 }

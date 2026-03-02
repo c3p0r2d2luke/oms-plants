@@ -1,19 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>OMS Plant Sale</title>
-        <link rel="icon" type="image/png" href="plant.png" sizes="256x256">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div>
-                <h1>OMS Plant Sale</h1>
-            </div>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMS Plant Sale</title>
+    <link rel="icon" type="image/png" href="plant.png" sizes="256x256">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <footer>
-            <p>OMS Plant Sale</p>
-        </footer>
-    </body>
+<body>
+
+<header>
+    <h1>OMS Plant Sale</h1>
+    <nav>
+        <a href="#plants">Plants</a>
+        <a href="#preorder">Preorders</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Fresh Plants. Local Growth. 🌿</h2>
+    <p>
+        Browse our collection of beautiful plants grown with care.
+        Preorder early to reserve limited seasonal favorites!
+    </p>
+    <a href="#plants" class="button">Shop Now</a>
+</section>
+
+<section id="plants" class="plant-grid">
+
+    <!-- Normal Plant -->
+    <div class="plant-card">
+        <img src="plant1.jpg" alt="Monstera Plant">
+        <h3>Monstera Deliciosa</h3>
+        <p>Large tropical leaves perfect for bright indoor spaces.</p>
+        <div class="price">$15.00</div>
+        <button class="button">Add to Cart</button>
+    </div>
+
+    <!-- Preorder Plant -->
+    <div class="plant-card">
+        <span class="preorder-badge">PREORDER</span>
+        <img src="plant2.jpg" alt="Lavender Plant">
+        <h3>Lavender Bundle</h3>
+        <p>Available May 15. Limited quantity.</p>
+        <div class="price">$10.00</div>
+        <button class="button">Reserve Now</button>
+    </div>
+
+</section>
+
+<section id="preorder">
+    <form>
+        <h2>Preorder a Plant</h2>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <select required>
+            <option value="">Select Plant</option>
+            <option>Lavender Bundle</option>
+            <option>Seasonal Herbs</option>
+        </select>
+        <button type="submit" class="button">Submit Preorder</button>
+    </form>
+</section>
+
+<footer id="contact">
+    <p>© 2026 OMS Plant Sale 🌿</p>
+</footer>
+
+</body>
 </html>
