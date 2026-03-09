@@ -1,72 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMS Plant Sale</title>
-    <link rel="icon" type="image/png" href="plant.png" sizes="256x256">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odyssey Middle School Native Plant Sale</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
-    <h1>OMS Plant Sale</h1>
-    <nav>
-        <a href="#plants">Plants</a>
-        <a href="#preorder">Preorders</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <h1>Odyssey Middle School Native Plant Sale</h1>
+    <p>Support local ecosystems and our school community!</p>
 </header>
 
-<section class="hero">
-    <h2>Fresh Plants. Local Growth. 🌿</h2>
+<nav>
+    <a href="#about">About</a>
+    <a href="#why">Why Native Plants?</a>
+    <a href="#plants">Plants</a>
+    <a href="#details">Event Details</a>
+</nav>
+
+<section id="about">
+    <h2>About the Sale</h2>
     <p>
-        Browse our collection of beautiful plants grown with care.
-        Preorder early to reserve limited seasonal favorites!
+        Odyssey Middle School is hosting a Native Plant Sale to help promote
+        environmentally friendly gardening and support student projects.
+        All plants are native to our region and help wildlife thrive.
     </p>
-    <a href="#plants" class="button">Shop Now</a>
 </section>
 
-<section id="plants" class="plant-grid">
+<section id="why">
+    <h2>Why Choose Native Plants?</h2>
 
-    <!-- Normal Plant -->
-    <div class="plant-card">
-        <img src="plant1.jpg" alt="Monstera Plant">
-        <h3>Monstera Deliciosa</h3>
-        <p>Large tropical leaves perfect for bright indoor spaces.</p>
-        <div class="price">$15.00</div>
-        <button class="button">Add to Cart</button>
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Help Pollinators</h3>
+            <p>Native plants provide food and habitat for bees, butterflies, and birds.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Save Water</h3>
+            <p>They are adapted to the local climate and require less watering.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Low Maintenance</h3>
+            <p>Native plants thrive naturally without fertilizers or special care.</p>
+        </div>
+    </div>
+</section>
+
+<section id="plants">
+    <h2>Example Plants</h2>
+
+    <div class="plant-grid">
+
+        <div class="plant-card">
+            <img src="plant1.jpg" alt="Oregon Grape">
+            <h3>Oregon Grape</h3>
+            <p>Evergreen shrub with yellow flowers and berries loved by birds.</p>
+        </div>
+
+        <div class="plant-card">
+            <img src="plant2.jpg" alt="Red Flowering Currant">
+            <h3>Red Flowering Currant</h3>
+            <p>Beautiful spring flowers that attract hummingbirds.</p>
+        </div>
+
+        <div class="plant-card">
+            <img src="plant3.jpg" alt="Yarrow">
+            <h3>Yarrow</h3>
+            <p>A hardy plant that attracts pollinators and blooms all summer.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="details">
+    <h2>Event Details</h2>
+
+    <div class="details-box">
+        <p><strong>Location:</strong> Odyssey Middle School</p>
+        <p><strong>Date:</strong> April 2</p>
+        <p><strong>Time:</strong> 3:15 PM</p>
+        <p><strong>Payment:</strong> Cash</p>
     </div>
 
-    <!-- Preorder Plant -->
-    <div class="plant-card">
-        <span class="preorder-badge">PREORDER</span>
-        <img src="plant2.jpg" alt="Lavender Plant">
-        <h3>Lavender Bundle</h3>
-        <p>Available May 15. Limited quantity.</p>
-        <div class="price">$10.00</div>
-        <button class="button">Reserve Now</button>
-    </div>
-
+    <p class="invite">
+        Come support students, beautify your garden, and help local wildlife!
+    </p>
 </section>
 
-<section id="preorder">
-    <form>
-        <h2>Preorder a Plant</h2>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <select required>
-            <option value="">Select Plant</option>
-            <option>Lavender Bundle</option>
-            <option>Seasonal Herbs</option>
-        </select>
-        <button type="submit" class="button">Submit Preorder</button>
-    </form>
-</section>
-
-<footer id="contact">
-    <p>© 2026 OMS Plant Sale 🌿</p>
+<footer>
+    <p>Odyssey Middle School • Native Plant Sale</p>
 </footer>
 
 </body>
