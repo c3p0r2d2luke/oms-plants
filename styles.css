@@ -109,3 +109,26 @@ footer{
     text-align:center;
     padding:15px;
 }
+/* 🔥 MEDIA SECTION */
+
+#media{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* row of images */
+#media .media-row{
+    display:flex;
+    gap:20px;
+}
+
+/* images behave exactly how you want */
+#media img{
+    flex:1;
+    width:100%;
+    height:auto;
+    max-height:400px; /* 👈 THIS is the key */
+    object-fit:contain; /* keeps full image visible */
+    border-radius:10px;
+}
