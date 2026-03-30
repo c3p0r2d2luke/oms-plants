@@ -132,3 +132,10 @@ footer{
     object-fit:contain; /* keeps full image visible */
     border-radius:10px;
 }
+
+.media iframe{
+    /* Key styles for the iframe */
+    border: none;
+    flex-grow: 1; /* Makes the iframe grow to fill the remaining vertical space */
+    width: 100%;  /* Ensures the iframe takes the full width */
+}
